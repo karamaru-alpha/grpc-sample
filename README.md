@@ -1,11 +1,17 @@
 # grpc-sample
 
-gRPC を用いてリアルタイムチャットを作ってみる
+gRPC を用いてリアルタイムチャット CLI を作ってみる
 
 ## セットアップ
 
-- 8080 番 Port で api サーバを起動する
+- 8080 番 Port でサーバを起動する
 
 ```
-$ make serve
+$ make server
+```
+
+- 8080 番 Port サーバに接続するクライアントを起動する
+
+```
+$ make client
 ```
