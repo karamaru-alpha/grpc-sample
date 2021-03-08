@@ -17,4 +17,5 @@ $ make client
 ```
 
 ## Preview
-https://user-images.githubusercontent.com/38310693/110377307-97323880-8097-11eb-9cac-e3e05b3411cd.mov
+
+![grpc_sample](https://user-images.githubusercontent.com/38310693/110378835-6e12a780-8099-11eb-8421-1430b074315b.gif)
