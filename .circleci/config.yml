@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.15.0 # circleci/golang:1.16.0がまだないため
+    steps:
+      - checkout
+      - run:
+          name: Install golangci-lint
+          command: go get github.com/golangci/golangci-lint/cmd/golangci-lint
+      - run:
+          name: Run golangci-lint
+          command: golangci-lint run
