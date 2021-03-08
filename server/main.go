@@ -3,11 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-
-	"github.com/karamaru-alpha/grpc-sample/config"
 )
 
 func main() {
@@ -23,7 +22,7 @@ func main() {
 	})
 
 	log.Println("Server running...")
-	if err := e.Start(":" + config.Port()); err != nil {
+	if err := e.Start(":" + os.Getenv("PORT")); err != nil {
 		log.Fatalf("Listen and serve failed. %+v", err)
 	}
 }
