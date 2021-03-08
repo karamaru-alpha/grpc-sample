@@ -85,7 +85,7 @@ func sendToStream(s Services_ChatServiceServer, clientID int, errch chan error) 
 
 		messageHandler.mu.Unlock()
 
-		// 送信者にはｌlogが表示されないように
+		// 送信者にはLogが表示されないように
 		if senderID != clientID {
 			err := s.Send(&FromServer{Name: senderName, Body: sendedMessage})
 
