@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
+	"google.golang.org/grpc"
+
 	"github.com/karamaru-alpha/grpc-sample/chatserver"
 	"github.com/karamaru-alpha/grpc-sample/config"
-
-	"google.golang.org/grpc"
 )
 
 func main() {
@@ -31,12 +31,15 @@ func main() {
 	}
 
 	ch := clientHandler{stream: stream}
+
+	// 名前登録
 	ch.setname()
 
 	// ストリーミング通信でメッセージを送受信する
 	go ch.sendMessage()
 	go ch.receiveMessage()
 
+	// Blocker
 	bl := make(chan bool)
 	<-bl
 }

@@ -34,7 +34,6 @@ func (*ChatServer) ChatService(s Services_ChatServiceServer) error {
 	go sendToStream(s, clientID, errch)
 
 	return <-errch
-
 }
 
 func receiveFromStream(s Services_ChatServiceServer, clientID int, errch chan error) {
