@@ -1,4 +1,4 @@
-# About
+## About
 
 gRPC を用いてリアルタイムチャット CLI を作ってみる
 
