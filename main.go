@@ -17,6 +17,7 @@ func main() {
 		middleware.Recover(),
 	)
 
+	// TODO: routeは別ディレクトリに切り出す
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello World")
 	})
